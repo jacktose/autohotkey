@@ -5,7 +5,6 @@ MyWorkingDir = %A_ScriptDir%
 ; @IncludeFolders:
 IncludeFolders = 
 (comments ltrim
-	; %MyWorkingDir%\#Includes	;What is this?
 	%MyWorkingDir%\All
 	; %MyWorkingDir%\Laptop
 	; %MyWorkingDir%\Desktop
