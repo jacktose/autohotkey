@@ -14,20 +14,25 @@ SendMode Input
 ~PrintScreen::
     ; Alt+PrintScreen saves image of full screen automatically.
     check_dir(screenshot_dir)
-    FormatTime, time, %A_Now%, yyyy-MM-dd HH.mm.ss
-    Run, % nircmd_path " savescreenshotfull """ screenshot_dir "\Screenshot " time ".png"""
+    Run, % nircmd_path " savescreenshotfull " ss_filename(screenshot_dir)
 return
 
 ~!PrintScreen::
     ; Alt+PrintScreen saves image of window automatically.
     ; For some reason, ~! is showing the alt tooltips when using this on Explorer windows. Regular AAlt+PrintScreen in Windows does not do that.
     check_dir(screenshot_dir)
-    FormatTime, time, %A_Now%, yyyy-MM-dd HH.mm.ss
-    Run, % nircmd_path " savescreenshotwin """ screenshot_dir "\Screenshot " time ".png"""
+    Run, % nircmd_path " savescreenshotwin " ss_filename(screenshot_dir)
 return
 
 check_dir(dir){
     ; See whether directory exists. If not, create it.
     IfNotExist, % dir
         FileCreateDir, % dir
+}
+
+ss_filename(dir){
+    ; Returns the full path of the screenshot file with current time.
+    FormatTime, time, %A_Now%, yyyy-MM-dd HH.mm.ss
+    filename := """" dir "\Screenshot " time ".png"""
+    return, filename
 }
