@@ -2,4 +2,4 @@
 #NoEnv
 SendMode Input
 
-::ksig::Regards,{Enter}Jack Enneking{Enter}Network Engineer+{Enter}K-20 Network Operations Center+{Enter}888-964-5551
+::ksig::Regards,{Enter}Jack Enneking{Enter}Network Engineer+{Enter}K-20 Network Operations Center+{Enter}888-934-5551
