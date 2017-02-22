@@ -1,7 +1,8 @@
 ;Auto-Execute   ; Makes the auto-include script run this section.
     EnvGet, user_dir, USERPROFILE
-    screenshot_dir := user_dir . "\Pictures\Screenshots"
-    nircmd_path := A_MyDocuments . "\Programs\nircmd-x64\nircmd.exe"
+    screenshot_dir := user_dir . "\Google Drive\Screenshots"
+    ;nircmd_path := A_MyDocuments . "\Programs\nircmd-x64\nircmd.exe"    ; work
+    nircmd_path := A_MyDocuments . "\Computer\Programs\nircmd-x64\nircmd.exe"   ; home
     IfNotExist, % nircmd_path
         Msgbox, 48, %A_ScriptName%: NirCmd not found
             , NirCmd not found:`n%nircmd_path%`n`nScreenshots will not be saved., 30
