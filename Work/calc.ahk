@@ -10,7 +10,7 @@ SetTitleMatchMode, 3 ;A window's title must exactly match WinTitle to be a match
 ;ahk_class ApplicationFrameWindow
 ;ahk_exe ApplicationFrameHost.exe
 
-#Numpad0:: ;Win+0 switches to or opens command prompt
+#Numpad0:: ;Win+0 switches to or opens calculator
     ;SplashImage, 1:, BMY0, , #0
 	IfWinExist, Calculator, Calculator
     {
